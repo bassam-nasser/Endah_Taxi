@@ -1,5 +1,11 @@
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven(url = "https://jitpack.io")
+    }
     dependencies {
+        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
         classpath("com.google.gms:google-services:4.4.0")
     }
 }
@@ -7,4 +13,6 @@ buildscript {
 plugins {
     id("com.android.application") version "8.1.1" apply false
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    id ("com.google.dagger.hilt.android") version "2.44" apply false
+
 }

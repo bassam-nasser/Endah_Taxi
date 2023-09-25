@@ -2,5 +2,11 @@
     <string name="app_name">Endah Taxi</string>
     <string name="endah">إنده</string>
     <string name="taxi">تاكسي</string>
-    <string name="register">تسجيل</string>
+    <string name="register">تسجيل سائق</string>
+    <string name="createAccount">إنشاء حساب</string>
+    <string name="name">الاسم</string>
+    <string name="model">الموديل</string>
+    <string name="type">النوع</string>
+    <string name="phoneNumber">رقم الموبايل</string>
+
 </resources>

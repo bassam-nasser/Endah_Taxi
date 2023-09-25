@@ -1,6 +1,7 @@
 package com.megatrust.endahtaxi.screens.home
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,20 +10,20 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -30,7 +31,7 @@ import androidx.navigation.NavController
 import com.megatrust.endahtaxi.R
 import com.megatrust.endahtaxi.composable.BodyBackground
 import com.megatrust.endahtaxi.ui.theme.BlackTaxi
-import com.megatrust.endahtaxi.ui.theme.YellowNormal
+import com.megatrust.endahtaxi.ui.theme.tajwalFamily
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -53,6 +54,20 @@ fun HomeScreenContent(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
+            Box(
+                Modifier
+                    .padding(top = 16.dp, start = 16.dp)
+                    .fillMaxWidth(),
+                contentAlignment = Alignment.TopStart
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_back),
+                    contentDescription = "back button",
+                    modifier = Modifier.clickable {
+                    }
+                )
+            }
+
             Spacer(modifier = Modifier.height(200.dp))
 
             Image(
@@ -64,21 +79,32 @@ fun HomeScreenContent(navController: NavController) {
 
             Spacer(modifier = Modifier.height(100.dp))
 
-            Card(
-                modifier = Modifier.shadow(20.dp, RoundedCornerShape(16.dp)),
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = YellowNormal),
-                onClick = {
-                    navController.navigate("RegisterScreen")
-                }
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
             ) {
-                Text(
-                    text = context.getString(R.string.register),
-                    style = MaterialTheme.typography.bodyMedium.copy(
-                        fontSize = 24.sp, color = BlackTaxi, fontWeight = FontWeight.Bold
-                    ),
-                    modifier = Modifier.padding(horizontal = 32.dp, vertical = 16.dp)
-                )
+                Button(
+                    onClick = { navController.navigate("RegisterScreen") },
+                    modifier = Modifier
+                        .padding(vertical = 16.dp)
+                        .fillMaxWidth()
+                        .height(48.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                ) {
+                    Text(
+                        text = context.getString(R.string.createAccount),
+                        style = MaterialTheme.typography.bodyMedium.copy(
+                            fontSize = 16.sp, color = BlackTaxi,
+                            fontFamily = tajwalFamily,
+                            textAlign = TextAlign.Center,
+                            fontWeight = FontWeight.Bold
+                        ),
+                        color = BlackTaxi,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
             }
 
         }
