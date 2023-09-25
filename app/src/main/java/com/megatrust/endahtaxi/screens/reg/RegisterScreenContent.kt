@@ -129,7 +129,8 @@ fun RegisterScreenContent(
                 Button(
                     onClick = {
 //                        viewModel.checkIfExistentBefore(viewModel.driverState.value.phoneNumber)
-                        when (val validation = checkDriverData(viewModel.driverState.value)) {
+                        when (val validation =
+                            checkDriverData(viewModel.driverState.value, context)) {
 
                             is RegisterValidation.Failed -> {
                                 Toast.makeText(context, validation.message, Toast.LENGTH_SHORT)

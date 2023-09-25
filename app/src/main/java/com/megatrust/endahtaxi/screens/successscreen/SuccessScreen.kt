@@ -5,5 +5,5 @@ import androidx.navigation.NavController
 
 @Composable
 fun SuccessScreen(navController: NavController) {
-    SuccessScreenContent()
+    SuccessScreenContent(navController = navController)
 }

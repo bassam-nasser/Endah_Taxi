@@ -1,21 +1,23 @@
 package com.megatrust.endahtaxi.utill
 
+import android.content.Context
+import com.megatrust.endahtaxi.R
 import com.megatrust.endahtaxi.models.Driver
 
-fun checkDriverData(driver: Driver): RegisterValidation {
+fun checkDriverData(driver: Driver, context: Context): RegisterValidation {
 
-    if (driver.name.length<3) {
-        return RegisterValidation.Failed("driver name field cant be empty or less than 3 char!!")
+    if (driver.name.length < 3) {
+        return RegisterValidation.Failed(context.getString(R.string.nameWarning))
     }
-    if (driver.phoneNumber.isEmpty()) {
-        return RegisterValidation.Failed("phone number field cant be empty or less than 3 char!!")
+    if (driver.phoneNumber.length<11||driver.phoneNumber.length>11) {
+        return RegisterValidation.Failed(context.getString(R.string.phoneWarning))
     }
 
     if (driver.carType.isEmpty()) {
-        return RegisterValidation.Failed("car type field cant be empty or less than 3 char!!")
+        return RegisterValidation.Failed(context.getString(R.string.typeWarning))
     }
     if (driver.carModel.isEmpty()) {
-        return RegisterValidation.Failed("car model field cant be empty or less than 3 char!!")
+        return RegisterValidation.Failed(context.getString(R.string.modelWarning))
     }
     return RegisterValidation.Success
 }

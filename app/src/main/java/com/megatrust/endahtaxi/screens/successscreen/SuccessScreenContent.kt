@@ -28,13 +28,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.megatrust.endahtaxi.R
 import com.megatrust.endahtaxi.ui.theme.BlackTaxi
 import com.megatrust.endahtaxi.ui.theme.tajwalFamily
 
 @Composable
-fun SuccessScreenContent() {
-//    navController: NavController
+fun SuccessScreenContent(navController: NavController) {
+
     val context = LocalContext.current
     Column(
         modifier = Modifier
@@ -51,6 +52,7 @@ fun SuccessScreenContent() {
                 painter = painterResource(id = R.drawable.ic_back),
                 contentDescription = "back button",
                 modifier = Modifier.clickable {
+                    navController.navigate("HomeScreen")
                 }
             )
         }
@@ -112,6 +114,7 @@ fun SuccessScreenContent() {
         ) {
             Button(
                 onClick = {
+                    navController.navigate("HomeScreen")
                 },
                 modifier = Modifier
                     .padding(vertical = 16.dp)
@@ -142,5 +145,5 @@ fun SuccessScreenContent() {
 @Composable
 @Preview
 fun HomeScreenPreview() {
-    SuccessScreenContent()
+//    SuccessScreenContent()
 }

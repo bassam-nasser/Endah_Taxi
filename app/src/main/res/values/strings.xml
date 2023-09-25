@@ -5,9 +5,13 @@
     <string name="register">تسجيل سائق</string>
     <string name="createAccount">إنشاء حساب</string>
     <string name="name">الاسم</string>
+    <string name="nameWarning">لا يمكن ان يبقي الاسم فارغا او اقل من 3 احرف!!</string>
     <string name="model">الموديل</string>
+    <string name="modelWarning">لا يمكن ان يبقي الموديل فارغا او اقل من 3 احرف!!</string>
     <string name="type">النوع</string>
+    <string name="typeWarning">لا يمكن ان يبقي النوع فارغا او اقل من 3 احرف!!</string>
     <string name="phoneNumber">رقم الموبايل</string>
+    <string name="phoneWarning">لا يمكن ان يكون رقم الموبايل اقل او اكثر من 11 رقم!!</string>
     <string name="thanksMessage">شكرا لانضمامك ل انده تاكسي \n نحن سعداء بكونك جزء من فريقنا </string>
     <string name="successMessage">تم انشاء حسابك \nبنجاح</string>
     <string name="start">إبدء</string>
