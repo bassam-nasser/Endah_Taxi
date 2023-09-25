@@ -32,7 +32,6 @@ import com.megatrust.endahtaxi.composable.BodyBackground
 import com.megatrust.endahtaxi.ui.theme.BlackTaxi
 import com.megatrust.endahtaxi.ui.theme.YellowDark
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SuccessScreenContent(navController: NavController) {
 

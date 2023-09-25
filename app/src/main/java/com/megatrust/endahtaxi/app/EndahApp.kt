@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.megatrust.endahtaxi.screens.home.HomeScreen
 import com.megatrust.endahtaxi.screens.reg.RegisterScreen
 import com.megatrust.endahtaxi.screens.reg.RegisterScreenContent
+import com.megatrust.endahtaxi.screens.successscreen.SuccessScreen
 
 @Composable
 fun EndahApp() {
@@ -14,5 +15,6 @@ fun EndahApp() {
     NavHost(navController = navController, startDestination = "HomeScreen") {
         composable("HomeScreen") { HomeScreen(navController) }
         composable("RegisterScreen") { RegisterScreen(navController) }
+        composable("SuccessScreen") { SuccessScreen(navController) }
     }
 }
