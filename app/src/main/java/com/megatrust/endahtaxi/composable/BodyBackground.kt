@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.sp
 import com.megatrust.endahtaxi.R
 import com.megatrust.endahtaxi.ui.theme.BlackTaxi
 import com.megatrust.endahtaxi.ui.theme.YellowDark
-import com.megatrust.endahtaxi.ui.theme.YellowNormal
 
 @Composable
 fun BodyBackground(
@@ -49,7 +48,7 @@ fun BodyBackground(
             Box(
                 modifier = Modifier
                     .size(screenWidthAverage)
-                    .background(YellowNormal)
+                    .background(YellowDark)
             ) {
 
             }
@@ -59,7 +58,7 @@ fun BodyBackground(
 
         Row(
             modifier = Modifier
-                .fillMaxHeight()
+//                .fillMaxHeight()
                 .fillMaxWidth()
         ) {
 
@@ -67,7 +66,8 @@ fun BodyBackground(
                 modifier = Modifier
                     .fillMaxHeight()
                     .size(width = screenWidthAverage, height = screenHeightAverage)
-                    .background(YellowNormal), contentAlignment = Alignment.TopEnd
+                    .background(YellowDark),
+                contentAlignment = Alignment.TopEnd
             ) {
 
                 Box(modifier = Modifier.padding(top = 100.dp)) {
@@ -78,7 +78,7 @@ fun BodyBackground(
                         Text(
                             text = context.getString(R.string.taxi),
                             style = MaterialTheme.typography.bodyMedium.copy(
-                                fontSize = 32.sp, color = YellowNormal
+                                fontSize = 32.sp, color = YellowDark
                             ),
                             modifier = Modifier.padding(horizontal = 32.dp)
                         )
@@ -97,7 +97,7 @@ fun BodyBackground(
                 Box(modifier = Modifier.padding(top = 100.dp)) {
                     Card(
                         shape = RoundedCornerShape(4.dp),
-                        colors = CardDefaults.cardColors(containerColor = YellowNormal)
+                        colors = CardDefaults.cardColors(containerColor = YellowDark)
                     ) {
                         Text(
                             text = context.getString(R.string.endah),
