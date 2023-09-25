@@ -75,17 +75,17 @@ dependencies {
     val nav_version = "2.6.0"
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
-    val lifecycle_version = "2.6.2"
+    val lifecycle_version = "2.5.1"
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
-    // ViewModel utilities for Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     //Dagger hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-compiler:2.44")
 
     //flow
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0-beta01")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.5.1")
+
 
 }

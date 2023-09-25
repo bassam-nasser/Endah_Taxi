@@ -25,6 +25,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.megatrust.endahtaxi.R
 import com.megatrust.endahtaxi.composable.InputTextField
@@ -35,13 +36,13 @@ import com.megatrust.endahtaxi.viewmodel.RegisterViewModel
 
 @SuppressLint("StateFlowValueCalledInComposition")
 @Composable
-fun RegisterScreenContent() {
-
+fun RegisterScreenContent(
+    viewModel: RegisterViewModel = hiltViewModel()
+) {
     val context = LocalContext.current
-
     var name by remember { mutableStateOf("") }
 
-    val viewModel: RegisterViewModel by viewModel()
+
     Column(
         modifier = Modifier
             .fillMaxSize()
