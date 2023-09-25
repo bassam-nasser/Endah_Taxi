@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "834827425701",
+    "project_id": "endah-taxi",
+    "storage_bucket": "endah-taxi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834827425701:android:a4e12bd4110ad52d58fa4c",
+        "android_client_info": {
+          "package_name": "com.megatrust.endahtaxi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLkVCiGuByHZhVcDBHBBmNkhBYbOPZ-gM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
