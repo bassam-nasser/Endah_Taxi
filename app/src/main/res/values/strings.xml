@@ -8,5 +8,7 @@
     <string name="model">الموديل</string>
     <string name="type">النوع</string>
     <string name="phoneNumber">رقم الموبايل</string>
-
+    <string name="thanksMessage">شكرا لانضمامك ل انده تاكسي \n نحن سعداء بكونك جزء من فريقنا </string>
+    <string name="successMessage">تم انشاء حسابك \nبنجاح</string>
+    <string name="start">إبدء</string>
 </resources>

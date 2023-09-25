@@ -146,7 +146,7 @@ fun RegisterScreenContent(
                         .padding(vertical = 16.dp)
                         .fillMaxWidth()
                         .height(48.dp)
-                        .clip(RoundedCornerShape(8.dp))
+                        .clip(RoundedCornerShape(4.dp))
                 ) {
                     Text(
                         text = context.getString(R.string.createAccount),
